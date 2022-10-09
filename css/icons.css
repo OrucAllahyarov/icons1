@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.demo {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 5px 5px 15px -5px #00000070;
+    color: #020203;
+    overflow: hidden ;
+    position: relative;
+}
+
+.demo i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.3s linear;
+}
+
+.demo:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.demo::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #bc0808;
+    transform: rotate(45deg);
+    left: 110%;
+    top: 80%;
+}
+
+.demo:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -100%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
